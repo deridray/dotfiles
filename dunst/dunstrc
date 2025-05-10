@@ -1,0 +1,51 @@
+[global]
+monitor = 0
+follow = mouse
+width = 300
+height = (0, 400) # dynamic height, max 300
+offset = (10, 50) # new syntax
+origin = top-right
+notification_limit = 3
+
+padding = 8
+horizontal_padding = 12
+frame_width = 1
+frame_color = "#5b5b5b"
+separator_color = frame
+corner_radius = 8
+
+font = JetBrainsMono Nerd Font 11
+
+line_height = 4
+markup = full
+format = "<b>%s</b>\n%b"
+alignment = left
+show_age_threshold = 60
+word_wrap = true
+ignore_newline = false
+
+idle_threshold = 120
+skip_display = false
+
+transparency = 0
+separator_height = 2
+
+mouse_left_click = close_current
+mouse_middle_click = do_action
+mouse_right_click = close_all
+
+[urgency_low]
+background = "#131519"
+foreground = "#ffffff"
+timeout = 5
+
+[urgency_normal]
+background = "#131519"
+foreground = "#ffffff"
+timeout = 8
+
+[urgency_critical]
+background = "#131519"
+foreground = "#ff5555"
+frame_color = "#ff5555"
+timeout = 0
