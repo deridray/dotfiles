@@ -19,11 +19,6 @@ make your linux look fire
 # download packages
 paru -Syu --needed --noconfirm firefox alacritty thunar bspwm sxhkd rofi polybar dunst picom neofetch gtk gtk2 gtk3 gtk4 code xarchiver mpv qimgv better-control discord telegram-desktop spotify java8-openjdk java17-openjdk java21-openjdk base-devel git networkmanager btrfs-progs flameshot htop mc bluez blueman pipewire wireplumber pipewire-pulse pipewire-alsa nvidia-dkms nvidia-utils lib32-nvidia-utils nvidia-settings vulkan-icd-loader lib32-vulkan-icd-loader playerctl zsh arandr lxappearance nitrogen cava kripton-theme-git ttf-jetbrains-mono ttf-jetbrains-mono-nerd papirus-icon-theme papirus-folders bibata-cursor-theme-bin
 ```
-## commands
-```
-# change papirus folders color to white
-papirus-folders --color white
-```
 ## git
 ```
 # clone themes for rofi
