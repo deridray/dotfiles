@@ -17,7 +17,7 @@ make your linux look fire
 ## packages:
 ```
 # download packages
-paru -Syu --needed --noconfirm firefox alacritty thunar bspwm sxhkd rofi polybar dunst picom neofetch gtk gtk2 gtk3 gtk4 code gamemode steam xarchiver mpv qimgv better-control discord telegram-desktop spotify java8-openjdk java17-openjdk java21-openjdk base-devel git networkmanager btrfs-progs flameshot htop mc bluez blueman pipewire wireplumber pipewire-pulse pipewire-alsa nvidia-dkms nvidia-utils lib32-nvidia-utils nvidia-settings vulkan-icd-loader lib32-vulkan-icd-loader playerctl zsh arandr lxappearance nitrogen cava kripton-theme-git ttf-jetbrains-mono ttf-jetbrains-mono-nerd papirus-icon-theme papirus-folders bibata-cursor-theme-bin
+paru -Syu --needed --noconfirm firefox alacritty thunar bspwm sxhkd rofi polybar dunst picom neofetch gtk gtk2 gtk3 gtk4 code gamemode steam prismlauncher xarchiver obs-studio mpv qimgv better-control discord telegram-desktop spotify java8-openjdk java17-openjdk java21-openjdk base-devel git networkmanager btrfs-progs flameshot htop mc bluez blueman pipewire wireplumber pipewire-pulse pipewire-alsa nvidia-dkms nvidia-utils lib32-nvidia-utils nvidia-settings vulkan-icd-loader lib32-vulkan-icd-loader playerctl zsh arandr lxappearance nwg-look nitrogen cava kripton-theme-git ttf-jetbrains-mono ttf-jetbrains-mono-nerd papirus-icon-theme papirus-folders bibata-cursor-theme-bin
 ```
 ## git
 ```
@@ -26,6 +26,13 @@ git clone --depth=1 https://github.com/adi1090x/rofi.git
 cd rofi
 chmod +x setup.sh
 ./setup.sh
+```
+```
+# install osu!
+git clone https://github.com/NelloKudo/osu-winello.git
+cd osu-winello
+chmod +x ./osu-winello.sh
+./osu-winello.sh
 ```
 ### .xinitrc
 ```
