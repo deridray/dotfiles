@@ -4,15 +4,6 @@ make your linux look fire
 
 
 ## list of configs i have:
-- `alacritty`
-- `bspwm/sxhkd`
-- `rofi`
-- `polybar`
-- `dunst`
-- `picom`
-- `neofetch`
-- `gtk 2/3/4`
-- `zsh`
 
 ## packages:
 ```
