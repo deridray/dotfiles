@@ -2,9 +2,6 @@
 # my configs for linux
 make your linux look fire
 
-
-## list of configs i have:
-
 ## packages:
 ```
 # download packages
