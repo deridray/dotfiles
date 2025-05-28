@@ -5,7 +5,7 @@ make your linux look fire
 ## packages:
 ```
 # download packages
-paru -Syu --needed --noconfirm firefox alacritty thunar bspwm sxhkd rofi polybar dunst picom neofetch code gamemode steam prismlauncher xarchiver obs-studio mpv qimgv better-control pavucontrol discord telegram-desktop spotify java8-openjdk java17-openjdk java21-openjdk base-devel git networkmanager btrfs-progs flameshot htop mc playerctl zsh arandr lxappearance nwg-look nitrogen cava bluez blueman pipewire wireplumber pipewire-pulse pipewire-alsa nvidia-dkms nvidia-utils lib32-nvidia-utils nvidia-settings vulkan-icd-loader lib32-vulkan-icd-loader kripton-theme-git ttf-jetbrains-mono ttf-jetbrains-mono-nerd papirus-icon-theme papirus-folders bibata-cursor-theme-bin
+paru -Syu --needed --noconfirm firefox alacritty thunar bspwm sxhkd hyprland hyprpaper hyprcursor hyprlock rofi wofi polybar waybar dunst swaync neofetch code gamemode steam prismlauncher xarchiver obs-studio mpv qimgv better-control pavucontrol discord telegram-desktop spotify java8-openjdk java17-openjdk java21-openjdk base-devel git networkmanager btrfs-progs flameshot htop mc playerctl zsh arandr nwg-look nitrogen cava bluez blueman pipewire wireplumber pipewire-pulse pipewire-alsa nvidia-dkms nvidia-utils lib32-nvidia-utils nvidia-settings vulkan-icd-loader lib32-vulkan-icd-loader kripton-theme-git ttf-font-awesome ttf-jetbrains-mono ttf-jetbrains-mono-nerd papirus-icon-theme papirus-folders bibata-cursor-theme-bin
 ```
 ## git
 ```
