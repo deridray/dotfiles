@@ -38,3 +38,8 @@ xset s noblank
 
 exec sxhkd &
 exec bspwm
+```
+### make zsh your default shell
+```
+chsh -s $(which zsh)
+```
