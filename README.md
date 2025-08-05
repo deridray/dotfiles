@@ -1,6 +1,5 @@
 ![setup](https://github.com/user-attachments/assets/eba80210-2c0f-4fb7-9b43-d8bafa8fffd4)
 # my configs for linux
-make your linux look fire
 
 ## packages:
 ```
@@ -8,13 +7,6 @@ make your linux look fire
 paru -Syu --needed --noconfirm firefox alacritty thunar bspwm sxhkd hyprland hyprpaper hyprcursor hyprlock rofi polybar waybar dunst swaync neofetch visual-studio-code-bin gamemode steam prismlauncher xarchiver obs-studio mpv qimgv better-control pavucontrol vesktop ayugram-desktop-bin spotify jdk8-openjdk jdk17-openjdk jdk21-openjdk base-devel git networkmanager btrfs-progs udiskie flameshot htop mc playerctl zsh arandr nwg-look nitrogen cava bluez blueman pipewire wireplumber pipewire-pulse pipewire-alsa nvidia-dkms nvidia-utils lib32-nvidia-utils nvidia-settings vulkan-icd-loader lib32-vulkan-icd-loader kripton-theme-git ttf-font-awesome ttf-jetbrains-mono ttf-jetbrains-mono-nerd nerd-fonts papirus-icon-theme papirus-folders bibata-cursor-theme-bin
 ```
 ## git
-```
-# clone themes for rofi
-git clone --depth=1 https://github.com/adi1090x/rofi.git
-cd rofi
-chmod +x setup.sh
-./setup.sh
-```
 ```
 # install osu!
 git clone https://github.com/NelloKudo/osu-winello.git
@@ -25,8 +17,6 @@ chmod +x ./osu-winello.sh
 ### .xinitrc
 ```
 #!/bin/sh
-
-lxappearance & disown
 
 # set cursor theme
 xsetroot -cursor_name left_ptr
