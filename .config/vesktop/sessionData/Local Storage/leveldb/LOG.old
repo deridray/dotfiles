@@ -1,0 +1,5 @@
+2025/08/05-23:45:56.092 217ac Reusing MANIFEST /home/deridray/.config/vesktop/sessionData/Local Storage/leveldb/MANIFEST-000001
+2025/08/05-23:45:56.095 217ac Recovering log #363
+2025/08/05-23:45:56.095 217ac Reusing old log /home/deridray/.config/vesktop/sessionData/Local Storage/leveldb/000363.log 
+2025/08/05-23:46:37.130 21815 Level-0 table #367: started
+2025/08/05-23:46:37.137 21815 Level-0 table #367: 80784 bytes OK

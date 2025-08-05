@@ -35,7 +35,7 @@ super + l
 	betterlockscreen -l dim
 
 screenshot
-super + Home
+alt + {_,shift + }s
 	flameshot gui
 
 # make sxhkd reload its configuration files:

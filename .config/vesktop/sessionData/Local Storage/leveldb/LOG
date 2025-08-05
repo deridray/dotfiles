@@ -1,0 +1,26 @@
+2025/08/05-23:46:39.223 2193b Reusing MANIFEST /home/deridray/.config/vesktop/sessionData/Local Storage/leveldb/MANIFEST-000001
+2025/08/05-23:46:39.227 2193b Recovering log #363
+2025/08/05-23:46:39.227 2193b Level-0 table #366: started
+2025/08/05-23:46:39.232 2193b Level-0 table #366: 80784 bytes OK
+2025/08/05-23:46:39.233 2193b Recovering log #366
+2025/08/05-23:46:39.233 2193b Reusing old log /home/deridray/.config/vesktop/sessionData/Local Storage/leveldb/000366.log 
+2025/08/05-23:46:39.236 2193b Delete type=0 #363
+2025/08/05-23:46:39.237 2193b Delete type=2 #367
+2025/08/05-23:46:39.237 2193c Compacting 4@0 + 1@1 files
+2025/08/05-23:46:39.241 2193c Generated table #367@0: 75 keys, 135384 bytes
+2025/08/05-23:46:39.241 2193c Compacted 4@0 + 1@1 files => 135384 bytes
+2025/08/05-23:46:39.244 2193c compacted to: files[ 0 1 1 0 0 0 0 ]
+2025/08/05-23:46:39.245 2193c Delete type=2 #357
+2025/08/05-23:46:39.245 2193c Delete type=2 #359
+2025/08/05-23:46:39.245 2193c Delete type=2 #361
+2025/08/05-23:46:39.245 2193c Delete type=2 #364
+2025/08/05-23:46:39.245 2193c Delete type=2 #366
+2025/08/05-23:47:39.238 2193b Level-0 table #369: started
+2025/08/05-23:47:39.257 2193b Level-0 table #369: 54184 bytes OK
+2025/08/05-23:47:39.261 2193b Delete type=0 #366
+2025/08/06-00:28:31.169 2193c Level-0 table #371: started
+2025/08/06-00:28:31.176 2193c Level-0 table #371: 57497 bytes OK
+2025/08/06-00:28:31.179 2193c Delete type=0 #368
+2025/08/06-00:36:48.540 2193c Level-0 table #373: started
+2025/08/06-00:36:48.547 2193c Level-0 table #373: 49406 bytes OK
+2025/08/06-00:36:48.551 2193c Delete type=0 #370

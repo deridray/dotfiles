@@ -27,8 +27,11 @@ bspc rule -a qimgv state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 
+dunst &
 nitrogen --restore
 systemctl --user enable opentabletdriver.service --now
 picom --config ~/.config/picom/picom.conf &
-$HOME/.screenlayout/display.sh
+# $HOME/.screenlayout/display.sh
 $HOME/.config/polybar/launch.sh
+sudo rmmod wacom
+udiskie &

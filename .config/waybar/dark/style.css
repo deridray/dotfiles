@@ -1,0 +1,41 @@
+@define-color foreground #eeeeee;
+@define-color foreground-inactive #aaaaaa;
+@define-color background #000000;
+@define-color border-bottom #FFFFFF;
+
+* {
+    font-family: JetBrainsMono Nerd Font;
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+}
+
+#waybar {
+    color: @foreground;
+    background-color: @background;
+    /* border-bottom: 1px solid @border-bottom; */
+}
+
+#workspaces button {
+    color: @foreground;
+    padding-left: 0.7em;
+}
+
+#workspaces button.empty {
+    color: @foreground-inactive;
+}
+
+#memory,
+#custom-platform-profile {
+    padding-left: 1em
+}
+
+#wireplumber,
+#battery,
+#idle_inhibitor,
+#language,
+#network,
+#bluetooth,
+#tray {
+    padding-right: 1em 
+}

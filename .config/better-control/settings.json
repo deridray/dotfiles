@@ -1,0 +1,19 @@
+{
+    "visibility": {},
+    "positions": {},
+    "usbguard_hidden_devices": [],
+    "language": "en",
+    "vertical_tabs": false,
+    "vertical_tabs_icon_only": false,
+    "tab_order": [
+        "Power",
+        "Wi-Fi",
+        "Volume",
+        "Bluetooth",
+        "Battery",
+        "Display",
+        "Autostart",
+        "USBGuard"
+    ],
+    "gamma": 6500
+}

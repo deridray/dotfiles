@@ -3,7 +3,7 @@ monitor = 0
 follow = mouse
 width = 300
 height = (0, 400) # dynamic height, max 300
-offset = (10, 50) # new syntax
+offset = (10, 10) # new syntax
 origin = top-right
 notification_limit = 3
 
@@ -14,7 +14,7 @@ frame_color = "#5b5b5b"
 separator_color = frame
 corner_radius = 8
 
-font = JetBrainsMono Nerd Font 11
+font = JetBrainsMono Nerd Font 8
 
 line_height = 4
 markup = full
