@@ -1,6 +1,5 @@
-![hyprland](https://github.com/user-attachments/assets/8488fba1-39fe-4bb9-89e9-2beae765c6e9)
-
 # my configs for linux(for bspwm and hyprland)
+![hyprland](https://github.com/user-attachments/assets/8488fba1-39fe-4bb9-89e9-2beae765c6e9)
 
 ## packages:
 ```
