@@ -13,19 +13,15 @@ bspc config gapless_monocle      true
 bspc config remove_disabled_monitors true
 bspc config remove_unplugged_monitors true
 
-bspc rule -a firefox desktop='^I' follow=on
-bspc rule -a chromium desktop='^I' follow=on
-bspc rule -a telegram-desktop desktop='^II' follow=on
-bspc rule -a discord desktop='^II' follow=on
-bspc rule -a thunar desktop='^III' follow=on
-bspc rule -a Alacritty desktop='^III' follow=on
-bspc rule -a code desktop='^IV' follow=on
-bspc rule -a spotify desktop='^V' state=floating follow=on center=on
-bspc rule -a mplayer2 state=floating
-bspc rule -a mpv state=floating
-bspc rule -a qimgv state=floating
-bspc rule -a Kupfer.py focus=on
-bspc rule -a Screenkey manage=off
+bspc rule -a Firefox desktop='^1'
+bspc rule -a Discord desktop='^2'
+bspc rule -a vesktop desktop='^2'
+bspc rule -a TelegramDesktop desktop='^2'
+bspc rule -a AyuGramDesktop desktop='^2'
+bspc rule -a Code desktop='^4'
+bspc rule -a Spotify desktop='^5'
+bspc rule -a mpv desktop='^5'
+bspc rule -a osu!.exe desktop='^6'
 
 dunst &
 nitrogen --restore

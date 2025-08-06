@@ -1,5 +1,7 @@
 #!/bin/sh
 
+lxappearance & disown
+
 # set cursor theme
 xsetroot -cursor_name left_ptr
 export XCURSOR_THEME="Bibata-Modern-Ice"
