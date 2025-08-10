@@ -27,6 +27,7 @@ dunst &
 nitrogen --restore
 systemctl --user enable opentabletdriver.service --now
 picom --config ~/.config/picom/picom.conf &
+setxkbmap -layout us,ua,ru -option 'grp:alt_shift_toggle' &
 # $HOME/.screenlayout/display.sh
 $HOME/.config/polybar/launch.sh
 sudo rmmod wacom

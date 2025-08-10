@@ -15,9 +15,6 @@ xset s off
 xset -dpms
 xset s noblank
 
-# keyboard layouts
-setxkbmap -layout us,ua,ru -option 'grp:alt_shift_toggle' &
-
 # monitor refresh rate
 xrandr --output DP-2 --mode 1920x1080 --rate 144 &
 
