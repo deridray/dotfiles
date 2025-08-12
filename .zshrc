@@ -8,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="agnoster"
+ZSH_THEME="archcraft"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -121,7 +121,7 @@ alias sudo='sudo $(history -p !!)'
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
 # Show time and git info on the prompt
-PROMPT='%{$fg[cyan]%}%D{%L:%M:%S} %{$fg[blue]%}%~ %{$fg[green]%}$(git_prompt_info)%{$reset_color%} $ '
+# PROMPT='%{$fg[cyan]%}%D{%L:%M:%S} %{$fg[blue]%}%~ %{$fg[green]%}$(git_prompt_info)%{$reset_color%} $ '
 
 # Forcing Zsh to auto-activate virtualenvs when using Python
 export VIRTUAL_ENV_DISABLE_PROMPT=1

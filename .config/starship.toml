@@ -1,0 +1,37 @@
+# ~/.config/starship.toml
+
+format = """\
+[](bold red)[](bold green)[](bold yellow) \
+[  $directory](cyan)\
+$git_branch$git_status\
+$python$nodejs\
+"""
+
+[directory]
+style = "cyan"
+truncation_length = 0
+truncation_symbol = "…/"
+
+[git_branch]
+format = " [  git:($branch)](bold blue)"
+
+[git_status]
+format = "([$all_status$ahead_behind]($style))"
+style = "blue"
+conflicted = " "
+ahead = "⇡${count} "
+behind = "⇣${count} "
+diverged = "⇕${count} "
+up_to_date = " "
+untracked = " "
+stashed = " "
+modified = " "
+staged = " "
+
+[python]
+symbol = " "
+style = "yellow"
+
+[nodejs]
+symbol = " "
+style = "green"
