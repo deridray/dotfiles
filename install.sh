@@ -57,8 +57,8 @@ echo "keyboard layout configured"
 
 # 3. change default shell to fish
 echo "changing your default shell to fish"
-chsh -s /usr/bin/fish || echo "failed to change shell for user, do it yourself"
-sudo chsh -s /usr/bin/fish root || echo "failed to change shell for root, do it yourself"
+chsh -s $(which fish) || echo "failed to change shell for user, do it yourself"
+sudo chsh -s $(which fish) root || echo "failed to change shell for root, do it yourself"
 
 # 4. add zsh plugins (requires $ZSH and oh-my-zsh)
 if [ -d "$ZSH/custom/plugins" ]; then
