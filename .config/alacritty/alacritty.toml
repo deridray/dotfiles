@@ -1,3 +1,8 @@
+[general]
+import = [
+    "~/.config/alacritty/themes/themes/kripton.toml"
+]
+
 [window]
 decorations = "none"
 opacity = 1
@@ -20,41 +25,3 @@ offset = { x = 0, y = 0 }
 [cursor]
 style = { shape = "Block", blinking = "On" }
 unfocused_hollow = true
-
-[colors.primary]
-background = "#131519"
-foreground = "#ffffff"
-
-[colors.normal]
-black   = "#1f2335"
-red     = "#f7768e"
-green   = "#9ece6a"
-yellow  = "#e0af68"
-blue    = "#7aa2f7"
-magenta = "#bb9af7"
-cyan    = "#7dcfff"
-white   = "#c0caf5"
-
-[colors.bright]
-black   = "#414868"
-red     = "#f7768e"
-green   = "#9ece6a"
-yellow  = "#e0af68"
-blue    = "#7aa2f7"
-magenta = "#bb9af7"
-cyan    = "#7dcfff"
-white   = "#ffffff"
-
-[mouse]
-hide_when_typing = true
-
-[selection]
-save_to_clipboard = true
-
-[bell]
-animation = "EaseOutExpo"
-duration = 0
-
-[debug]
-render_timer = false
-log_level = "Warn"
