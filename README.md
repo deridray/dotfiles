@@ -42,9 +42,16 @@ xrandr --output DP-2 --mode 1920x1080 --rate 144 &
 sxhkd &
 exec bspwm
 ```
+### make fish your default shell
+```
+chsh -s /usr/bin/fish
+sudo chsh -s /usr/bin/fish root
+```
+or
 ### make zsh your default shell
 ```
 chsh -s $(which zsh)
+sudo chsh -s /usr/bin/zsh root
 ```
 then, add plugins
 ```
