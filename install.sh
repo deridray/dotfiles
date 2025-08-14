@@ -21,7 +21,7 @@ else
     echo "paru is already installed"
 fi
 
-echo "starting to install shit, hold tight..."
+echo "starting to install packages, hold tight..."
 
 # 0. copy dotfiles to home, if folder dotfiles exists in cwd
 if [ -d ./dotfiles ]; then
