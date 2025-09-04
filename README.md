@@ -1,6 +1,6 @@
 # my configs for linux(for bspwm and hyprland)
 ![hyprland](https://github.com/user-attachments/assets/8488fba1-39fe-4bb9-89e9-2beae765c6e9)
-
+### !NOTE! this configs are made for me personally, so there may be useless packages for you, so if u want, you can manually install them and remove packages that you won't need.
 # 1. installation
 ```
 git clone https://github.com/deridray/dotfiles.git
