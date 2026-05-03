@@ -1,0 +1,57 @@
+{
+    "layer": "top",
+    "position": "top",
+    "margin-top": 8,
+    "height": 38,
+    "spacing": 12,
+    "modules-left": [],
+    "modules-center": [
+        "clock",
+        "mpris",
+        "hyprland/workspaces",
+        "pulseaudio",
+        "network",
+        "battery"
+    ],
+    "modules-right": [],
+    "clock": {
+        "format": "{:%H:%M}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+    "mpris": {
+        "format": "󰏤 {artist} - {title}",
+        "format-paused": "󰐊 {artist} - {title}",
+        "max-length": 35
+    },
+    "hyprland/workspaces": {
+        "format": "{name}",
+        "on-click": "activate",
+        "all-outputs": true,
+        "sort-by-number": true,
+        "persistent-workspaces": {
+            "*": 5
+        }
+    },
+    "pulseaudio": {
+        "format": "{icon}",
+        "format-muted": "󰖁",
+        "format-icons": {
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+    "network": {
+        "format-wifi": "",
+        "format-ethernet": "󰈀",
+        "format-disconnected": "󰖪",
+        "tooltip-format-wifi": "{essid} ({signaldBm}dBm) ",
+        "on-click": "nm-connection-editor"
+    },
+    "battery": {
+        "states": {
+            "critical": 15
+        },
+        "format": "{icon}",
+        "format-icons": ["", "", "", "", ""]
+    }
+}

@@ -14,6 +14,7 @@ alias ...="cd ../.."
 alias connect="ssh owodray@192.168.0.107"
 alias upd="sudo nano /opt/discord/resources/build_info.json"
 alias tosu="~/documents/tosu/tosu"
+alias vencord='sh -c "$(curl -sS https://vencord.dev/install.sh)"'
 alias collector="~/documents/collector/osu-collector-dl"
 alias dotfiles="$HOME/dotfiles/.sync.sh"
 alias commit="$HOME/dotfiles/.push.sh"

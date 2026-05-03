@@ -1,0 +1,110 @@
+{
+    "layer": "top",
+    "position": "top",
+    "margin-top": 5,
+    "margin-left": 10,
+    "margin-right": 10,
+    "margin-bottom": 0,
+    "height": 40,
+    "spacing": 0,
+
+    "modules-left": [
+        "custom/launcher",
+        "hyprland/workspaces",
+        "clock#time"
+    ],
+    
+    "modules-center": [
+        "mpris",
+        "custom/cava",
+        "hyprland/window"
+    ],
+    
+    "modules-right": [
+        "power-profiles-daemon",
+        "network",
+        "battery",
+        "custom/powermenu"
+    ],
+
+    // --- LEFT ---
+    "custom/launcher": {
+        "format": "󰣇",
+        "on-click": "rofi -show drun",
+        "tooltip": false
+    },
+
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "on-click": "activate",
+        "all-outputs": true,
+        "format-icons": {
+            "active": "",
+            "default": ""
+        },
+        "persistent-workspaces": { "*": [1, 2, 3, 4, 5, 6] }
+    },
+
+    "clock#time": {
+        "format": "{:%H:%M}",
+        "tooltip-format": "<tt>{:%A, %B %d, %Y}</tt>"
+    },
+
+    // --- MIDDLE ---
+    "mpris": {
+        "format": "{player_icon} {dynamic}",
+        "format-paused": "{status_icon} <i>{dynamic}</i>",
+        "player-icons": { "default": "󰎆", "spotify": "󰓇" },
+        "status-icons": { "paused": "󰏤" },
+        "max-length": 25
+    },
+
+    "custom/cava": {
+        "exec": "~/.scripts/cava.sh",
+        "format": "{}",
+        "return-type": "json",
+        "tooltip": false
+    },
+
+    "hyprland/window": {
+        "format": "{title}",
+        "max-length": 30,
+        "separate-outputs": true,
+        "rewrite": {
+            "": "󰇄 Desktop",
+            "(.*) - Brave": "󰊯 $1",
+            "(.*) - Spotify": "󰓇 $1",
+            "kitty": "󰄛 Terminal"
+        }
+    },
+
+    // --- RIGHT ---
+    "power-profiles-daemon": {
+        "format": "{icon}",
+        "tooltip": true,
+        "format-icons": {
+            "default": "",
+            "performance": "󱐌",
+            "balanced": "",
+            "power-saver": "󰌪"
+        }
+    },
+
+    "network": {
+        "format-wifi": " ",
+        "format-disconnected": "󰖪 Offline",
+        "on-click": "kitty -e nmtui"
+    },
+
+    "battery": {
+        "states": { "warning": 30, "critical": 15 },
+        "format": "{icon} {capacity}%",
+        "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    },
+
+    "custom/powermenu": {
+        "format": "󰐥",
+        "on-click": "wlogout",
+        "tooltip": false
+    }
+}

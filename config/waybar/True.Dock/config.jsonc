@@ -1,0 +1,99 @@
+{
+  "reload_style_on_change": true,
+  "layer": "top",
+  "position": "top",
+  "spacing": 0,
+  "height": 35,
+  "margin-top": 0,
+  "margin-left": 0,
+  "margin-right": 0,
+  
+  "modules-left": ["custom/active_window"],
+  "modules-center": [ "group/center3-expander", "hyprland/workspaces", "group/center2-expander" ],
+  "modules-right": [
+    "custom/separator#blank",
+    "custom/separator#dot",
+    "group/right1"
+  ],
+
+  "group/center2": {
+    "orientation": "inherit",
+    "modules": [ "mpris", "clock", "custom/screenrecording-indicator", "custom/update", "custom/idle-indicator", "custom/notification-silencing-indicator" ]
+  },
+  "group/center3": {
+    "orientation": "inherit",
+    "modules": [ "cpu", "custom/separator#dot", "memory", "custom/separator#dot", "disk" ]
+  },
+  "group/right1": {
+    "orientation": "inherit",
+    "modules": [ "network", "bluetooth", "battery" ]
+  },
+
+  "group/center3-expander": {
+    "orientation": "inherit",
+    "drawer": { "transition-duration": 600, "children-class": "center3-group-item" },
+    "modules": ["custom/expand-iconl", "group/center3"]
+  },
+  "group/center2-expander": {
+    "orientation": "inherit",
+    "drawer": { "transition-duration": 600, "transition-left-to-right": false, "children-class": "center2-group-item" },
+    "modules": [ "custom/expand-iconr", "group/center2"]
+  },
+
+  "custom/expand-iconl": { "format": "  ", "tooltip": false },
+  "custom/expand-iconr": { "format": "  ", "tooltip": false },
+  "custom/separator#blank": { "format": " ", "tooltip": false },
+  "custom/separator#dot": { "format": "  ", "tooltip": false },
+
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "on-click": "activate",
+    "all-outputs": true,
+    "format-icons": {
+          "default": "",
+          "active": "",
+          "empty": "",
+    },
+    "persistent-workspaces": { "*": [1, 2, 3, 4, 5, 6] }
+  },
+
+  "mpris": {
+    "format": "󰎆 {title}",
+    "format-paused": "󰏤 {title}",
+    "max-length": 35,
+    "tooltip": false
+  },
+
+  "bluetooth": {
+    "format": "󰂯 ",
+    "format-connected": "󰂱",
+    "format-disabled": "󰂲",
+    "tooltip-format": "Not connected",
+    "tooltip-format-connected": "{device_alias}",
+    "tooltip-format-enumerate-connected": "{device_alias}"
+  },
+
+  "network": {
+    "format-wifi": " 󰤨 ",
+    "format-ethernet": "󰈀",
+    "format-disconnected": "󰤭",
+    "tooltip-format-wifi": "{essid}  {signalStrength}%",
+    "tooltip-format-ethernet": "{ifname}",
+    "tooltip-format-disconnected": "Not connected",
+    "max-length": 20
+  },
+
+  "battery": {
+    "format": "{icon} {capacity}%",
+    "format-charging": "󰂄 {capacity}%",
+    "format-plugged": "󰚥 {capacity}%",
+    "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+    "states": { "warning": 30, "critical": 15 },
+    "tooltip": false
+  },
+
+  "cpu": { "format": "󰻠 {usage}%" },
+  "memory": { "format": "󰍛 {percentage}%" },
+  "disk": { "format": "󰋊 {percentage_used}%", "path": "/" },
+  "tray": { "icon-size": 16, "spacing": 8 }
+}

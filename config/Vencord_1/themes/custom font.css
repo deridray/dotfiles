@@ -1,0 +1,13 @@
+/**
+* @name Custom Font
+* @author https://github.com/Tokwo/custom-font-for-vencord
+* @description Uses a custom font
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root {
+    --font-primary: 'JetBrainsMono Nerd Font', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+    --font-display: 'JetBrainsMono Nerd Font', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+}
+

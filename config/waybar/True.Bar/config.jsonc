@@ -1,0 +1,80 @@
+{
+    "layer": "top",
+    "position": "top",
+    "margin-top": 8,
+    "margin-left": 12,
+    "margin-right": 12,
+    "height": 38,
+    "spacing": 8, 
+    "modules-left": ["custom/launcher", "hyprland/window"],
+    "modules-center": [
+        "cpu", 
+        "memory", 
+        "mpris",
+        "custom/cava",
+        "hyprland/workspaces", 
+        "clock", 
+        "custom/performance", 
+        "battery", 
+        "custom/power"
+    ],
+    "modules-right": ["network", "bluetooth"],
+
+    "custom/launcher": {
+        "format": "󰣇",
+        "on-click": "rofi -show drun",
+        "tooltip": false
+    },
+
+    "hyprland/window": {
+        "format": "Desktop\n{initialTitle}",
+        "max-length": 20
+    },
+
+    "cpu": {
+        "interval": 1,
+        "format": "󰻠 {usage}%",
+        "states": { "critical": 80 }
+    },
+
+    "memory": {
+        "interval": 5,
+        "format": "󰍛 {percentage}%"
+    },
+
+    "mpris": {
+        "format": "󰎆 {title}",
+        "max-length": 40
+    },
+
+    "custom/cava": { "exec": "waybar-cava", "format": "{}" },
+
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "on-click": "activate",
+        "all-outputs": true,
+        "format-icons": {
+            "active": "",
+            "default": ""
+        },
+        "persistent-workspaces": { "*": [1, 2, 3, 4, 5, 6] }
+    },
+
+    "clock": { "format": "{:%H:%M · %a, %d/%m}" },
+
+    "custom/performance": {
+        "format": "󰓅",
+        "on-click": "powerprofilesctl set performance"
+    },
+
+    "battery": { 
+        "format": "{icon} {capacity}%", 
+        "format-icons": ["", "", "", "", ""] 
+    },
+
+    "custom/power": { "format": "", "on-click": "wlogout" },
+
+    "network": { "format-wifi": " " },
+
+    "bluetooth": { "format": "󰂯" }
+}

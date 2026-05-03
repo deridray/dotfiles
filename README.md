@@ -19,7 +19,7 @@ chmod +x ./install.sh
 ### packages:
 ```
 # main pkgs
-paru -Syu --needed stow librewolf-bin brave-bin kitty thunar yazi neovim sddm hyprland swww hyprcursor hyprlock hypridle hyprpicker rofi waybar matugen-bin btop mission-center swaync fastfetch nano xarchiver ncdu flatpak mpv rmpc qimgv better-control pavucontrol fish starship nwg-look nwg-displays nwg-clipman
+paru -Syu --needed stow librewolf-bin brave-bin kitty thunar yazi neovim sddm hyprland awww waypaper hyprcursor hyprlock hypridle hyprpicker rofi waybar matugen-bin btop mission-center swaync fastfetch nano xarchiver ncdu flatpak mpv rmpc qimgv better-control pavucontrol fish starship nwg-look nwg-displays nwg-clipman
 
 # drivers and libraries
 paru -Syu --needed base-devel git cmake ninja wget zenity udiskie bluez blueman pipewire wireplumber pipewire-pulse pipewire-alsa pamixer mpd xdg-desktop-portal xdg-desktop-portal-hyprland xwaylandvideobridge networkmanager btrfs-progs ntfs-3g gvfs gvfs-dnssd cliphist wl-clipboard ffmpeg tar unzip 7zip jq poppler fd ripgrep ripdrag fzf zoxide resvg imagemagick libqalculate aubio libcava evolution-data-server luarocks playerctl openssh

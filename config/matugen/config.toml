@@ -1,4 +1,9 @@
 [config]
+reload_apps = true
+
+[config.reload_apps_list]
+kitty = true
+gtk_theme = true
 
 [templates.alacritty]
 input_path = '~/.config/matugen/templates/alacritty.toml'

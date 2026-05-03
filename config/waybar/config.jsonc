@@ -1,16 +1,16 @@
 {
   "layer": "top",
-  "margin": "15 5 0 5",
+  "margin": "5 5 0 5",
   "position": "top",
   "height": 42,
-  "spacing": 2,  "exclusive": true,
+  "spacing": 0,  "exclusive": true,
   "gtk-layer-shell": true,
   "passthrough": false,
   "fixed-center": true,
   "modules-left": ["custom/menu", "hyprland/workspaces", "hyprland/window"],
   "modules-center": ["mpris"],
   "modules-right": [
-    "tray",
+    "group/tray-expander",
     "hyprland/language",
     "battery",
     "network",
@@ -63,6 +63,21 @@
         "tooltip": false,
         "on-click": "$HOME/.config/rofi/launcher/launcher.sh"
     },
+  "group/tray-expander": {
+    "orientation": "horizontal",
+    "drawer": {
+      "transition-duration": 300,
+      "children-class": "tray-group-item"
+    },
+    "modules": [
+      "custom/expand-icon",
+      "tray"
+    ]
+  },
+  "custom/expand-icon": {
+    "format": " ",
+    "tooltip": false
+  },
   "tray": {
     "show-passive-items": false,
     "spacing": 10
@@ -115,7 +130,7 @@
     },
 
     "hyprland/language": {
-        "format": " {} ",
+        "format": "{} ",
         "format-en": "en",
         "format-ua": "ua",
         "format-ru": "ru",

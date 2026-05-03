@@ -1,0 +1,89 @@
+@import "theme.css";
+
+* {
+    font-family: "JetBrainsMono Nerd Font", sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    box-shadow: none;
+}
+
+window#waybar {
+    background-color: transparent;
+    color: @on_surface;
+    border: none;
+}
+
+.modules-center {
+    background-color: alpha(@surface, 0.95);
+    border-radius: 20px;
+    padding: 0 16px;
+}
+
+#clock {
+    color: @on_surface;
+    font-size: 15px;
+    font-weight: 900;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+#mpris {
+    color: @secondary;
+    padding-left: 8px;
+    padding-right: 12px;
+}
+
+#workspaces {
+    padding: 0;
+    margin: 0;
+}
+
+#workspaces button {
+    color: alpha(@outline, 0.5);
+    background-color: @transparent;
+    margin: 5px 2px;
+    padding: 0 8px;
+    min-width: 16px;
+    border-radius: 16px;
+    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.68);
+}
+
+#workspaces button:hover {
+    color: @on_surface;
+    background-color: alpha(@outline, 0.1);
+}
+
+#workspaces button.active {
+    color: @surface;
+    background-image: linear-gradient(to right, @primary, @tertiary);
+    min-width: 30px;
+    padding: 0 12px;
+}
+
+#pulseaudio,
+#network,
+#battery {
+    padding: 0 8px;
+    font-size: 15px;
+}
+
+#pulseaudio {
+    color: @tertiary;
+    padding-left: 12px;
+}
+
+#network {
+    color: #d3869b;
+}
+
+#battery {
+    color: @secondary;
+    padding-right: 8px;
+}
+
+#battery.critical {
+    color: @error;
+}

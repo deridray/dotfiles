@@ -1,0 +1,71 @@
+@import "theme.css";
+
+* {
+    font-family: "JetBrainsMono Nerd Font", sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    border: none;
+}
+
+window#waybar {
+    background: alpha(@surface, 0.85); 
+    border-radius: 16px;
+    color: @on_surface;
+    border: 1px solid alpha(@outline, 0.2);
+}
+
+#custom-launcher, #window, #cpu, #memory, #mpris, #custom-cava, #clock, #battery, #network, #bluetooth, #custom-power, #custom-performance {
+    padding: 0 12px;
+    margin: 4px 2px;
+}
+
+#custom-launcher { font-size: 18px; color: @primary; }
+#cpu { color: @tertiary; }
+#memory { color: @secondary; }
+#mpris { color: @primary; min-width: 100px; }
+#custom-cava { color: @secondary; font-size: 14px; }
+
+/* THE WORKSPACE PILL */
+#workspaces {
+    background-color: @surface_container;
+    margin: 8px 10px;
+    border-radius: 20px;
+    padding: 0 4px;
+}
+
+#workspaces button {
+    color: alpha(@on_surface, 0.3);
+    margin: 2px 2px;
+    padding: 0;
+    min-width: 18px;
+    min-height: 18px;
+    font-size: 12px;
+    transition: all 0.2s ease;
+}
+
+#workspaces button.active {
+    background-color: @primary;
+    color: @on_primary;
+    border-radius: 50%;
+}
+
+#clock { color: @primary; }
+#custom-power { color: @error; font-size: 16px; }
+
+#network, #bluetooth {
+    background-color: @surface_container_high;
+    border-radius: 10px;
+    margin: 6px 2px;
+}
+
+@keyframes pulse {
+    to { background-color: alpha(@error, 0.6); color: @on_error; }
+}
+
+#cpu.critical {
+    animation-name: pulse;
+    animation-duration: 0.8s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    border-radius: 8px;
+}

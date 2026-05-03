@@ -28,7 +28,7 @@ border_style  = { fg = "{{colors.surface_tint.default.hex}}" }
 # : Indicator [[[
 
 [indicator]
-padding = { open = "█", close = "█" }
+padding = { open = "", close = "" }
 
 # : ]]]
 

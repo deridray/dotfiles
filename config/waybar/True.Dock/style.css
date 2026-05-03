@@ -1,0 +1,146 @@
+@import "theme.css";
+
+* {
+  border: none;
+  border-radius: 1px;
+  min-height: 0;
+  font-family: 'JetBrainsMono Nerd Font Propo';
+  font-size: 12px;
+}
+
+window#waybar {
+  background-color: transparent;
+  transition-property: background-color;
+  transition-duration: .5s;
+}
+
+.modules-center {
+  padding: 0 15px;
+  background-color: alpha(@surface, 0.85);
+  border-radius: 1px 1px 99px 99px;
+}
+
+#workspaces {
+    padding: 0 24px;
+    margin: 4px;
+    border-radius: 99px;
+    background-color: alpha(@surface_container, 0.4);
+}
+
+#workspaces button {
+  color: @on_surface;
+  padding: 0 6px;
+}
+
+#workspaces button.active {
+  color: @on_primary;
+  background: alpha(@primary, 0.9);
+  border-radius: 18px;
+  margin: 6px 4px;
+}
+
+#group-right1, #right1 {
+    background-color: alpha(@surface, 0.6);
+    padding: 0 10px;
+    margin: 4px;
+    border-radius: 16px;
+}
+
+#cpu, #memory, #disk {
+    font-weight: 700;
+    background-color: alpha(@surface_container, 0.5);
+    border-radius: 12px;
+    padding: 2px 10px;
+    margin: 4px 3px;
+}
+
+#cpu    { color: @primary; }
+#memory { color: @secondary; }
+#disk   { color: @tertiary; }
+
+#custom-separator {
+    color: @surface_container_high;
+    font-size: 10px;
+    padding: 0 2px;
+}
+
+#clock {
+    color: @on_surface;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+#mpris {
+    color: @primary;
+    font-weight: 600;
+    padding: 0 8px 0 4px;
+    margin-right: 4px;
+    border-right: 1px solid alpha(@on_surface, 0.15);
+}
+
+tooltip {
+  background: @surface;
+  border: 1px solid alpha(@on_surface, 0.2);
+  border-radius: 8px;
+  padding: 4px 8px;
+}
+
+tooltip label {
+  color: @on_surface;
+}
+
+#custom-expand-iconl,
+#custom-expand-iconr {
+    color: @primary;
+    background-color: transparent;
+    font-size: 14px;
+    padding: 0 5px;
+}
+
+#custom-expand-iconl:hover,
+#custom-expand-iconr:hover {
+    color: @on_surface;
+}
+
+/* Right group */
+#bluetooth {
+    color: @primary;
+    padding: 0 6px;
+}
+
+#bluetooth.disabled,
+#bluetooth.off {
+    color: @outline;
+}
+
+#network {
+    color: @primary;
+    padding: 0 6px;
+}
+
+#network.disconnected {
+    color: @outline;
+}
+
+#battery {
+    color: @primary;
+    padding: 0 6px;
+}
+
+#battery.charging,
+#battery.plugged {
+    color: @primary;
+}
+
+#battery.warning {
+    color: @tertiary;
+}
+
+#battery.critical {
+    color: @error;
+    animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0.4; }
+}

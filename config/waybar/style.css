@@ -55,6 +55,7 @@ window#waybar {
 #memory,
 #window,
 #language,
+#custom-expand-icon,
 #mpris {
     padding: 0.3rem 0.6rem;
     margin: 0.4rem 0.25rem;

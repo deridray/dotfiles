@@ -63,18 +63,17 @@ Help() {
     osu-wine --winecfg : Runs winecfg on the osu! Wineprefix
     osu-wine --winetricks: Install packages on osu! Wineprefix
     osu-wine --regedit: Opens regedit on osu! Wineprefix
-    osu-wine --wine <args>: Runs wine + your arguments as if it was normal wine
+    osu-wine --wine <args>: Runs wine + your arguments as if it was normal wine inside osu's wineprefix
     osu-wine --kill: Kills osu! and related processes in osu! Wineprefix
     osu-wine --kill9: Kills osu! but with wineserver -k9
     osu-wine --update: Updates wine-osu to the latest version
     osu-wine --fixprefix: Reinstalls the osu! Wineprefix from system
-    osu-wine --fixfolders: Reconfigure osu-handler and native file integration (run this if osu!direct/.osz/.osk/opening folders from ingame is broken)
+    osu-wine --fixfolders: Reconfigure osu-handler and native file integration (run this if osu!direct/.osz/.osk handling, or opening folders/.osu/.osb files from ingame is broken)
     osu-wine --fix-yawl: Reinstalls files related to yawl and the Steam Runtime in case something went wrong
     osu-wine --fixrpc: Reinstalls rpc-bridge if needed!
-    osu-wine --remove: Uninstalls osu! and the script
+    osu-wine --remove: Uninstall the script and/or uninstall osu!
     osu-wine --changedir: Changes directory of the install according to the user
     osu-wine --devserver <address>: Runs osu with an alternative server (e.g. --devserver akatsuki.gg)
-    osu-wine --runinprefix <file>: Launches a custom executable within osu!'s Wineprefix
     osu-wine --osuhandler <beatmap, skin..>: Launches osu-handler-wine with the specified file/link
     osu-wine --gosumemory: Installs and runs gosumemory without any needed config!
     osu-wine --tosu: Installs and runs tosu without any needed config!
@@ -118,6 +117,13 @@ if [ "$WINE_USE_CACHY" == "true" ]; then
     MainScript winecachy-setup
     export WINE="$XDG_DATA_HOME/osuconfig/yawl-winello-cachy"
     export WINE_INSTALL_PATH="$XDG_DATA_HOME/osuconfig/wine-osu-cachy-10.0"
+fi
+
+# Allow using bundled gstreamer
+if [ -f "${WINE_INSTALL_PATH}/lib/wine/x86_64-unix/libgstfaad.so" ]; then
+    export GST_PLUGIN_SYSTEM_PATH_1_0="${WINE_INSTALL_PATH}/lib/wine/x86_64-unix"
+    export WINE_GST_REGISTRY_DIR="${WINEPREFIX}/gstreamer-1.0"
+    mkdir -p "${WINE_GST_REGISTRY_DIR}"
 fi
 
 LaunchOsu() {

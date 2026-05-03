@@ -1,0 +1,49 @@
+@import "theme.css";
+
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 13px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+window#waybar {
+    background: transparent;
+    border: none;
+}
+
+.modules-left > widget > *,
+.modules-center > widget > *,
+.modules-right > widget > * {
+    background-color: alpha(@surface, 0.85); 
+    color: @text;
+    border-radius: 18px;
+    padding: 2px 15px;
+    margin: 4px 6px;
+    border: none; 
+}
+
+#custom-launcher { color: @primary; font-size: 16px; }
+#workspaces button { color: @subtext; background: transparent; padding: 0 6px; border: none; }
+#workspaces button.active { color: @primary; }
+#clock { color: @tertiary; }
+#mpris { color: @primary; }
+
+#custom-cava {
+    background-color: alpha(@surface, 0.85);
+    color: @primary; 
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 16px;
+    border: none;
+}
+
+#custom-cava.silent { background-color: transparent; }
+#window { color: @text; }
+#power-profiles-daemon { color: @secondary; }
+#network { color: @primary; }
+#battery { color: @primary; }
+#battery.warning { color: @error; }
+#custom-powermenu { color: @error; font-size: 16px; }
