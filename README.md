@@ -1,4 +1,4 @@
-# my dotfiles for hyprland
+# my configs for arch linux!
 <img width="1920" height="1080" alt="hyprland-dusk" src="https://github.com/user-attachments/assets/dab2ee6a-2730-4505-b952-d22ce6fc2528" />
 <img width="1920" height="1080" alt="hyprland-forest" src="https://github.com/user-attachments/assets/ff473bda-7c85-4478-8c9a-68e6583c5ef4" />
 
