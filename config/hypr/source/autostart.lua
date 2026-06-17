@@ -1,0 +1,20 @@
+-------------------
+---- AUTOSTART ----
+-------------------
+hl.on("hyprland.start", function () 
+    hl.exec_cmd("awww-daemon")
+    hl.exec_cmd("hypridle")
+    hl.exec_cmd("gsr-ui")
+    hl.exec_cmd("chown $USER:$USER -R $HOME")
+    hl.exec_cmd("udiskie &")
+    hl.exec_cmd("systemctl --user start hyprpolkitagent")
+    hl.exec_cmd("systemctl --user enable opentabletdriver.service --now")
+    hl.exec_cmd("rmmod wacom")
+    hl.exec_cmd("wl-paste --watch cliphist store")
+    hl.exec_cmd("wl-paste --type text --watch cliphist -max-items=50 store")
+    hl.exec_cmd("wl-paste --type image --watch cliphist -max-items=50 store")
+    hl.exec_cmd("hyprctl setcursor Bibata-Modern-Ice 24")
+    hl.exec_cmd("gsettings set org.gnome.desktop.interface cursor-theme Bibata-Modern-Ice")
+    hl.exec_cmd("$HOME/.config/hypr/scripts/low-power.sh")
+    hl.exec_cmd("$HOME/.config/waybar/launch.sh")
+end)

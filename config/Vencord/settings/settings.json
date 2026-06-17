@@ -9,7 +9,7 @@
     ],
     "enableReactDevtools": false,
     "frameless": true,
-    "transparent": true,
+    "transparent": false,
     "winCtrlQ": false,
     "disableMinSize": true,
     "winNativeTitleBar": false,
@@ -408,7 +408,8 @@
             "enabled": false
         },
         "PictureInPicture": {
-            "enabled": true
+            "enabled": true,
+            "loop": true
         },
         "PinDMs": {
             "enabled": true,
@@ -668,7 +669,8 @@
         },
         "Settings": {
             "enabled": true,
-            "settingsLocation": "aboveNitro"
+            "settingsLocation": "aboveNitro",
+            "includeVencordInfoWhenCopying": true
         },
         "DisableDeepLinks": {
             "enabled": true
@@ -703,6 +705,9 @@
         },
         "CharacterCounter": {
             "enabled": false
+        },
+        "NoMiddleClickPaste": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -715,7 +720,7 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1777668248616
+        "settingsSyncVersion": 1778363231498
     },
     "uiElements": {
         "chatBarButtons": {},

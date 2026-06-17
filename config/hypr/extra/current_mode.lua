@@ -6,4 +6,4 @@ decoration {
                 animations { 
                     enabled = true 
                 }
-                source = /home/deridray/.config/hypr/extra/opacity.conf
+                source = /home/deridray/.config/hypr/extra/opacity.lua

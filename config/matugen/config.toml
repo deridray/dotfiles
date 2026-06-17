@@ -38,8 +38,8 @@ input_path = '~/.config/matugen/templates/gtk-colors.css'
 output_path = '~/.config/gtk-4.0/colors.css'
 
 [templates.hyprland]
-input_path = '~/.config/matugen/templates/hyprland-colors.conf'
-output_path = '~/.config/hypr/extra/hyprland-colors.conf'
+input_path = '~/.config/matugen/templates/hyprland-colors.lua'
+output_path = '~/.config/hypr/extra/hyprland-colors.lua'
 post_hook   = 'hyprctl reload'
 
 [templates.hyprlock]
@@ -114,3 +114,10 @@ output_path = '~/.config/wlogout/colors.css'
 [templates.yazi]
 input_path = '~/.config/matugen/templates/yazi-theme.toml'
 output_path = '~/.config/yazi/theme.toml'
+
+[templates.neovim]
+input_path  = '~/.config/matugen/templates/neovim/template.lua'
+output_path = '~/.config/nvim/colors.lua'
+post_hook   = '''
+  pkill -SIGUSR1 -x nvim || :
+'''

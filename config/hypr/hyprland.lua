@@ -1,0 +1,10 @@
+require("source.appearance")
+require("source.autostart")
+require("source.env")
+require("source.input")
+require("source.keybinds")
+require("source.misc")
+require("source.monitors")
+require("source.permissions")
+require("source.windowrules")
+

@@ -2,7 +2,7 @@
   "layer": "top",
   "margin": "5 5 0 5",
   "position": "top",
-  "height": 42,
+  "height": 24,
   "spacing": 0,  "exclusive": true,
   "gtk-layer-shell": true,
   "passthrough": false,
@@ -133,6 +133,7 @@
         "format": "{} ",
         "format-en": "en",
         "format-ua": "ua",
+        "format-Ukrainian": "ua",
         "format-ru": "ru",
     },
 
