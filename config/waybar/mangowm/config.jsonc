@@ -7,7 +7,7 @@
   "gtk-layer-shell": true,
   "passthrough": false,
   "fixed-center": true,
-  "modules-left": ["custom/menu", "mango/workspaces", "mango/layout", "mpris"],
+  "modules-left": ["custom/menu", "mango/workspaces", "mpris"],
   "modules-center": ["clock", "custom/notification"],
   "modules-right": [
     "group/tray-expander",
@@ -43,7 +43,7 @@
 	  "icon-size": 20
   },
   "mango/layout": {
-      "format": " [{}]",
+      "format": " [ {} ] ",
       // "format-S": "Scroller",
       // "format-T": "Tile",
   },
