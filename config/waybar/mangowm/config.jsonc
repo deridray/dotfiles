@@ -1,0 +1,191 @@
+{
+  "layer": "top",
+  "margin": "5 5 0 5",
+  "position": "top",
+  "height": 24,
+  "spacing": 0,  "exclusive": true,
+  "gtk-layer-shell": true,
+  "passthrough": false,
+  "fixed-center": true,
+  "modules-left": ["custom/menu", "mango/workspaces", "mango/layout", "mpris"],
+  "modules-center": ["clock", "custom/notification"],
+  "modules-right": [
+    "group/tray-expander",
+    "mango/language",
+    "network",
+    "pulseaudio",
+    "battery",
+    "custom/powermenu"
+  ],
+  "custom/spotify": {
+      "format": " {}",
+      "return-type": "json",
+      "on-click": "playerctl -p spotify play-pause",
+      "on-click-right": "playerctl -p spotify next",
+      "exec": "playerctl -p spotify metadata --format '{\"text\": \"{{artist}} - {{title}}\", \"class\": \"{{status}}\"}' --follow",
+      "max-length": 40
+  },
+  "mpris": {
+      "format": " {dynamic}",
+      "format-paused": " <i>{dynamic}</i>",
+      "player": "spotify",
+      "dynamic-order": ["artist", "title"]
+  },
+  "mango/workspaces": {
+      "format": "{icon}",
+      "hide-empty": true,
+      "on-click": "activate",
+      "on-click-right": "toggle",
+      "overview-label": "OVERVIEW",
+  },
+  "mango/window": {
+    "format": "{}",
+	  "icon-size": 20
+  },
+  "mango/layout": {
+      "format": " [{}]",
+      // "format-S": "Scroller",
+      // "format-T": "Tile",
+  },
+  "mango/language": {
+  "format": "{short}",
+  },
+  "mango/keymode": {
+  	"format": "{}",
+  	// "format-default": " Default",
+    // "format-test": " Test",
+  },
+    "custom/menu": {
+        "format": "",
+        "tooltip": false,
+        "on-click": "$HOME/.config/rofi/launcher/launcher.sh"
+    },
+  "group/tray-expander": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 300,
+      "children-class": "tray-group-item",
+    },
+    "modules": ["custom/expand-icon", "tray"],
+  },
+
+  "custom/expand-icon": {
+    "format": "",
+    "tooltip": false,
+  },
+
+  "tray": {
+    "show-passive-items": true,
+    "spacing": 10,
+  },
+  "clock": {
+    "format": "{:%a %d ｜ %H:%M}",
+    "format-alt": "{:L%d %B %Y}",
+    "tooltip-format": "<span>{calendar}</span>",
+    "calendar": {
+      "mode": "month",
+      "mode-mon-col": 3,
+      "on-click-right": "mode",
+      "format": {
+        "month": "<span color='#ffead3'><b>{}</b></span>",
+        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+        "today": "<span color='#ff6699'><b>{}</b></span>",
+      },
+    },
+  },
+  "cpu": {
+    "format": " {usage}%",
+    "tooltip": true,
+    "interval": 1
+  },
+  "memory": {
+    "format": " {used:0.1f}Gi"
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": " ",
+    "format-icons": {
+      "headphone": "",
+      "default": [" ", " ", " "]
+    },
+    "on-click": "control --volume",
+    "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%+ && ~/.local/bin/volume.sh",
+    "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%- && ~/.local/bin/volume.sh",
+    "max-volume": 150
+  },
+    "network": {
+        "format": "",
+        "on-click": "control --wifi",
+        "format-ethernet": "\udb83\udc9d",
+        "format-wifi": "{icon}",
+        "format-disconnected": "\udb83\udc9c disconnected",
+        "format-icons": ["\udb82\udd2f", "\udb82\udd1f", "\udb82\udd22", "\udb82\udd25", "\udb82\udd28"],
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+        "tooltip-format-ethernet": "{ifname}",
+        "tooltip-format-disconnected": "disconnected"
+    },
+
+    "bluetooth": {
+        "format": "\udb80\udcaf",
+        "on-click": "control --bluetooth",
+        "format-disabled": "\udb80\udcb2",
+        "format-connected": "\udb80\udcb1",
+        "tooltip-format": "{controller_alias}\t{controller_address}",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
+    },
+    "battery": {
+        "bat": "BAT1",
+        "interval": 60,
+        "states": {
+		"warning": 30,
+		"critical": 15
+	},
+	"events": {
+		"on-discharging-warning": "notify-send -u normal 'low battery' 'you have less then 30% battery left'",
+		"on-discharging-critical": "notify-send -u normal 'very low battery' 'you have less then 15% battery left'"
+	},
+        "format": "{icon} {capacity}%",
+        "format-charging": "{icon} ",
+        "tooltip-format": "time left: {time}",
+        "on-click": "control --battery",
+        "format-icons": {
+        "default": ["", "", "", "", ""]
+    }
+    },
+  "custom/sep": {
+    "format": "|",
+    "tooltip": false
+  },
+  "custom/power": {
+    "tooltip": false,
+    "on-click": "wlogout -p layer-shell &",
+    "format": "⏻"
+  },
+  "custom/powermenu": {
+    "format": " \uf011  ",
+    "tooltip": false,
+    "on-click": "$HOME/.config/rofi/powermenu/powermenu.sh"
+  },
+  "custom/notification": {
+    "tooltip": false,
+    "format": "{icon}",
+    "format-icons": {
+      "notification": "󱅫",
+      "none": "󰂜",
+      "dnd-notification": "",
+      "dnd-none": "󰪑",
+      "inhibited-notification": "󰅸",
+      "inhibited-none": "󰂜",
+      "dnd-inhibited-notification": "",
+      "dnd-inhibited-none": "󰪑",
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "sleep 0.1s && swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true,
+  },
+},
+

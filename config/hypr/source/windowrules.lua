@@ -46,6 +46,8 @@ hl.window_rule({
     immediate = true,
 })
 
+hl.workspace_rule({ workspace = "1", layout_opts = { direction = "right" } })
+
 hl.layer_rule({
     blur         = true,
     ignore_alpha = 0,
@@ -375,4 +377,32 @@ hl.window_rule({
     float  = true,
     size   = "1100 600",
     center = true,
+})
+
+-- Window Mode
+hl.window_rule({
+    match          = { class = "^(com\\.kwimy\\.Matuwall)$" },
+    float          = true,
+    animation      = "slide top",
+    rounding       = 15,
+    border_size    = 0,
+    rounding_power = 2,
+    no_shadow      = true,
+})
+
+-- Panel Mode
+hl.layer_rule({
+    match        = { namespace = "matuwall" },
+    blur         = true,
+})
+
+hl.layer_rule({
+    match        = { namespace = "matuwall" },
+    ignore_alpha = 0.5,
+})
+
+-- Backdrop
+hl.layer_rule({
+    match      = { namespace = "matuwall-backdrop" },
+    animation  = "fade",
 })

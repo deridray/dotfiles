@@ -1,0 +1,15 @@
+{
+  "window_bg": "{{colors.background.default.rgba | set_alpha: 0.58}}",
+  "text_color": "{{colors.primary.default.hex}}",
+  "header_bg_start": "{{colors.background.default.rgba | set_alpha: 0.58}}",
+  "header_bg_end": "{{colors.background.default.rgba | set_alpha: 0.78}}",
+  "backdrop_bg": "{{colors.background.default.rgba | set_alpha: 0}}",
+  "card_bg": "{{colors.secondary.dark.rgba | set_alpha: 0.04}}",
+  "card_border": "{{colors.secondary.dark.rgba | set_alpha: 0.05}}",
+  "card_hover_bg": "{{colors.secondary.dark.rgba | set_alpha: 0.08}}",
+  "card_hover_border": "{{colors.primary.default.rgba | set_alpha: 0.2}}",
+  "card_selected_bg": "{{colors.primary.default.rgba | set_alpha: 0.12}}",
+  "card_selected_border": "{{colors.primary.default.rgba | set_alpha: 0.35}}",
+  "applied_text": "{{colors.primary.default.hex}}",
+  "applied_overlay_bg": "{{colors.background.dark.rgba | set_alpha: 0.90}}"
+}

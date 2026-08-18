@@ -20,7 +20,8 @@ hl.config({
         extend_border_grab_area = 15, -- Extends click/drag area around the border (needs resize_on_border)
         hover_icon_on_border = true, -- Shows cursor icon when hovering over borders (needs resize_on_border)
         allow_tearing = true, -- Master switch for allowing tearing to occur
-        resize_corner = 0 -- Forces floating windows to use specific corner when resized (1-4, 0 to disable)
+        resize_corner = 0, -- Forces floating windows to use specific corner when resized (1-4, 0 to disable)
+        layout = "master"
     },
 
     decoration = {
@@ -126,14 +127,19 @@ hl.config({
 -- See https://wiki.hypr.land/Configuring/Layouts/Master-Layout/ for more
 hl.config({
     master = {
-        new_status = "master",
-    },
+            new_status = "slave", 
+            new_on_top = true, 
+            -- orientation = "right",
+            mfact = 0.5
+        },
 })
 
 -- See https://wiki.hypr.land/Configuring/Layouts/Scrolling-Layout/ for more
 hl.config({
     scrolling = {
         fullscreen_on_one_column = true,
+        column_width = 0.9,
+        direction = "right"
     },
 })
 

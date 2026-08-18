@@ -48,7 +48,8 @@ alias c="clear && fastfetch"
 alias fetch="clear && fastfetch"
 
 alias neofetch="fastfetch"
-alias waybar="$HOME/.config/waybar/launch.sh"
+alias waybar-hyprland="$HOME/.config/waybar/hyprland/launch.sh"
+alias waybar-mangowm="$HOME/.config/waybar/mangowm/launch.sh"
 
 # ====== integration with starship ======
 if type -q starship
@@ -87,5 +88,6 @@ starship init fish | source
 
 # ====== set default editor ======
 set -gx EDITOR code
+set -gx __GL_GSYNC_ALLOWED -1
 
 fish_add_path /home/deridray/.spicetify

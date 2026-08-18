@@ -1,0 +1,128 @@
+@import "colors.css";
+
+* {
+    min-height: 0;
+    min-width: 0;
+    font-family: Lexend, "JetBrainsMono NFP";
+    font-size: 16px;
+    font-weight: 600;
+}
+
+window#waybar {
+    background-color: alpha(@surface, 0.8);
+    color: #ffffff;
+    border-radius: 15px;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+#workspaces button {
+    padding: 0.3rem 0.6rem;
+    margin: 0.4rem 0.25rem;
+    border-radius: 6px;
+    background-color: @surface_container;
+    color: @on_surface;
+}
+
+#workspaces button:hover {
+    color: @on_surface;
+    background-color: @surface_container_high;
+}
+
+#workspaces button.active {
+    background-color: @primary;
+    color: @on_primary;
+}
+
+#workspaces button.urgent {
+    background-color: @error;
+    color: @on_error;
+}
+
+#clock,
+#pulseaudio,
+#wireplumber,
+#battery,
+#bluetooth,
+#network,
+#custom-logo,
+#custom-menu,
+#custom-power,
+#custom-spotify,
+#custom-notification,
+#cpu,
+#tray,
+#memory,
+#window,
+#language,
+#custom-expand-icon,
+#mpris {
+    padding: 0.3rem 0.6rem;
+    margin: 0.4rem 0.25rem;
+    border-radius: 6px;
+    /* background-color: #181825; */
+    background-color: transparent;
+    color: @primary;
+}
+
+#mpris.playing {
+    color: @primary;
+}
+
+#mpris.paused {
+    color: #9399b2;
+}
+
+#custom-sep {
+    padding: 0px;
+    color: #585b70;
+}
+
+window#waybar.empty #window {
+    background-color: transparent;
+}
+
+#cpu {
+    color: #94e2d5;
+}
+
+#memory {
+    color: #cba6f7;
+}
+
+#clock {
+    color: @primary;
+}
+
+#clock.simpleclock {
+    color: @primary;
+}
+
+#window {
+    color: @primary;
+}
+
+#pulseaudio {
+    color: @primary;
+}
+
+#pulseaudio.muted {
+    color: @primary;
+}
+
+#custom-logo {
+    color: @primary;
+}
+
+#custom-power {
+    color: @error;
+}
+
+#custom-powermenu {
+    color: @error;
+}
+
+tooltip {
+    background-color: @background;
+    border: 2px solid @primary;
+}

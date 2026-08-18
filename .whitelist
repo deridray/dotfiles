@@ -1,5 +1,4 @@
 # folders
-alacritty
 btop
 cava
 fastfetch
@@ -7,21 +6,19 @@ fish
 gtk-3.0
 gtk-4.0
 hypr
+mango
 kitty
 matugen
-mpv
 nvim
 qt5ct
 qt6ct
 rofi
 spicetify
 swaync
-Vencord
 waybar
 waypaper
 xsettingsd
 yazi
-mpd
 
 # files
 user-dirs.dirs

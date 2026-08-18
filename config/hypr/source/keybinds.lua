@@ -3,7 +3,7 @@
 ---------------------
 -- Set programs that you use
 local terminal    = "kitty"
-local fileManager = "thunar"
+local fileManager = "kitty yazi"
 local browser     = "zen-browser"
 local email       = "betterbird"
 local editor      = "code"
@@ -20,6 +20,7 @@ local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 -- Converted binds
 hl.bind(mainMod .. " + Return", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + Q",      hl.dsp.window.close())
+hl.bind(mainMod .. " + SHIFT + M", hl.dsp.exec_cmd("hyprctl dispatch \"hl.dsp.session.exit()\""))
 hl.bind(mainMod .. " + E",      hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + N",      hl.dsp.exec_cmd(editor))
 hl.bind(mainMod .. " + W",      hl.dsp.exec_cmd(browser))
@@ -32,6 +33,7 @@ hl.bind(mainMod .. " + F",      hl.dsp.window.fullscreen({ mode = "fullscreen", 
 hl.bind(mainMod .. " + M",      hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }))
 hl.bind(mainMod .. " + S",      hl.dsp.window.float({ action = "toggle" }))
 hl.bind("ALT + Tab",            hl.dsp.focus({ workspace = "previous" }), { repeating = true })
+-- hl.bind(mainMod .. " + Tab",    hl.dsp.layout("cyclenext"))
 hl.bind("SUPER + L",            hl.dsp.exec_cmd("hyprlock"))
 hl.bind(mainMod .. " + D",      hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + V",      hl.dsp.exec_cmd(clipboard))
@@ -40,6 +42,10 @@ hl.bind(mainMod .. " + C",      hl.dsp.exec_cmd(colorpicker))
 hl.bind(mainMod .. " + P",      hl.dsp.exec_cmd("nwg-displays"))
 hl.bind("CONTROL + SHIFT + Escape", hl.dsp.exec_cmd("missioncenter"))
 hl.bind(mainMod .. " + J",      hl.dsp.layout("togglesplit")) -- dwindle
+hl.bind(mainMod .. " + period", hl.dsp.exec_cmd("hyprctl dispatch layoutmsg move +col"))
+hl.bind(mainMod .. " + comma", hl.dsp.exec_cmd("hyprctl dispatch layoutmsg move -col"))
+hl.bind(mainMod .. " + SHIFT + period", hl.dsp.exec_cmd("hyprctl dispatch layoutmsg swapcol r"))
+hl.bind(mainMod .. " + SHIFT + comma", hl.dsp.exec_cmd("hyprctl dispatch layoutmsg swapcol l"))
 
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + left",  hl.dsp.focus({ direction = "left" }))

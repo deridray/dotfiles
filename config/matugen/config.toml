@@ -42,6 +42,10 @@ input_path = '~/.config/matugen/templates/hyprland-colors.lua'
 output_path = '~/.config/hypr/extra/hyprland-colors.lua'
 post_hook   = 'hyprctl reload'
 
+[templates.mangowm_colors]
+input_path = '~/.config/matugen/templates/mangowm.conf'
+output_path = '~/.config/mango/conf.d/colors.conf'
+
 [templates.hyprlock]
 input_path  = '~/.config/matugen/templates/hyprlock-colors.conf'
 output_path = '~/.config/hypr/extra/hyprlock-colors.conf'
@@ -64,8 +68,12 @@ input_path = './templates/kvantum-colors.svg'
 output_path = '~/.config/Kvantum/matugen/matugen.svg'
 
 [templates.vesktop]
-input_path = '~/.config/matugen/templates/midnight-discord.css'
-output_path = '~/.config/Vencord/themes/midnight-discord.css'
+input_path = '~/.config/matugen/templates/midnight.theme.css'
+output_path = '~/.config/Vencord/themes/midnight.theme.css'
+
+[templates.equicord]
+input_path = '~/.config/matugen/templates/midnight.theme.css'
+output_path = '~/.config/Equicord/themes/midnight.theme.css'
 
 [templates.hyprluna]
 input_path = "~/.config/matugen/templates/vscode-hyprluna.json"
@@ -83,11 +91,11 @@ post_hook = 'swaync-client -rs || true'
 
 [templates.qt5ct]
 input_path = '~/.config/matugen/templates/qtct-colors.conf'
-output_path = '~/.config/qt5ct/colors/matugen.conf'
+output_path = '~/.config/qt5ct/colors.conf'
 
 [templates.qt6ct]
 input_path = '~/.config/matugen/templates/qtct-colors.conf'
-output_path = '~/.config/qt6ct/colors/matugen.conf'
+output_path = '~/.config/qt6ct/colors.conf'
 
 [templates.rofi]
 input_path = '~/.config/matugen/templates/rofi-colors.rasi'
@@ -97,9 +105,14 @@ output_path = '~/.config/rofi/colors/matugen.rasi'
 input_path = '~/.config/matugen/templates/starship-colors.toml'
 output_path = '~/.config/starship.toml'
 
-[templates.waybar]
+[templates.waybar-hyprland]
 input_path = '~/.config/matugen/templates/colors.css'
-output_path = '~/.config/waybar/colors.css'
+output_path = '~/.config/waybar/hyprland/colors.css'
+post_hook = 'pkill -SIGUSR2 waybar'
+
+[templates.waybar-mangowm]
+input_path = '~/.config/matugen/templates/colors.css'
+output_path = '~/.config/waybar/mangowm/colors.css'
 post_hook = 'pkill -SIGUSR2 waybar'
 
 [templates.wine]
@@ -121,3 +134,7 @@ output_path = '~/.config/nvim/colors.lua'
 post_hook   = '''
   pkill -SIGUSR1 -x nvim || :
 '''
+
+[templates.matuwall]
+input_path = '~/.config/matugen/templates/matuwall.json'
+output_path = '~/.config/matuwall/colors.json'
